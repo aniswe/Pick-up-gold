@@ -53,8 +53,7 @@ addEventListener("keyup", function (e) {
 var reset = function () {
     clearInterval(monsterspeed);
 
-    hero.x = canvas.width / 2;
-    hero.y = canvas.height-70;
+   
 
     // Throw the monster somewhere on the screen randomly
     monster.x = 32 + (Math.random() * (canvas.width - 64));
@@ -153,5 +152,9 @@ requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame
 
 // Let's play this game!
 var then = Date.now();
+
+hero.x = canvas.width / 2;
+hero.y = canvas.height - 70;
+
 reset();
 main();
